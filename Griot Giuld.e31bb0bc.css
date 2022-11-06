@@ -1,0 +1,443 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+section {
+  position: -webkit-sticky; /* Required for Safari */
+  position: sticky;
+  height: auto;
+  top: 0;
+  overflow: visible;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "cursive", "Arial Narrow", Arial, sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1583087750047-74631ab2ab47?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+  background-position: center;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+/*Nav Styling Starts*/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  /*Transparent Background color with rgba hack (0,0,0,.5) gives transparent effect*/
+  background-color: rgb(255, 255, 255);
+  color: rgba(42, 212, 255, 0.459);
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+
+.nav-links a {
+  color: rgb(0, 183, 255);
+  font-size: larger;
+  font-family: monospace;
+  font-weight: 800;
+}
+
+/* LOGO */
+.logo {
+  position: fixed;
+  left: 0px;
+  height: auto;
+  width: 60px;
+  border-radius: 50%;
+  top: 5px;
+  margin-left: 15px;
+  z-index: -1;
+  transition: 0.3s ease;
+}
+
+.logo2 {
+  position: fixed;
+  left: 60px;
+  height: auto;
+  width: 170px;
+  border-radius: 50%;
+  top: 5px;
+  margin-left: 15px;
+  z-index: -1;
+  transition: 0.3s ease;
+}
+
+/* Navbar Menu */
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+}
+
+.menu li:hover {
+  background-color: #000000;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+/* Dropdown Menu */
+.services {
+  position: relative;
+}
+
+.dropdown {
+  background-color: rgb(0, 0, 0);
+  padding: 1em 0;
+  position: absolute; /* With Respect To Parent */
+  display: none;
+  border-radius: 8px;
+  top: 35px;
+}
+
+.dropdown li + li {
+  margin-top: 10px;
+}
+
+.dropdown li {
+  padding: 0.5em 1em;
+  width: 8em;
+  text-align: center;
+}
+
+.dropdown li:hover {
+  background-color: #ffffff;
+}
+
+.services:hover .dropdown {
+  display: block;
+}
+
+/*Nav Bar Styling Ends*/
+/*RESPONSIVE NAVBAR MENU STARTS*/
+/* CHECKBOX HACK */
+input[type=checkbox] {
+  display: none;
+}
+
+/*Hamburger Menu*/
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/*Applying Media Queries*/
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #000000;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+  .dropdown li:hover {
+    background-color: #000000;
+  }
+}
+/*RESPONSIVE NAVBAR MENU ENDS*/
+section {
+  height: auto;
+  padding-top: 5em;
+  padding-bottom: 10em;
+  padding-left: 5em;
+  padding-right: 5em;
+  margin-top: 15em;
+}
+section h1 {
+  font-size: 3em;
+}
+section p {
+  font-size: 1.5em;
+}
+section a {
+  color: white;
+  font-weight: bold;
+}
+section:last-child {
+  background: rgba(32, 37, 43, 0);
+  color: white;
+}
+
+.section1 {
+  background-color: #ffffff;
+}
+
+.section2 {
+  position: relative;
+  padding: 6rem;
+  height: 80vh;
+  color: white;
+  background-image: url(https://www.chicagotribune.com/resizer/6A5qA50bzcApxmXVUAtPtZ73_hk=/arc-anglerfish-arc2-prod-tronc/public/5HPQC5ZAHNHJ3IXH6AUZPLIK7E.jpg);
+  background-position: bottom;
+  background-position-y: 15%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  max-width: 600px;
+  border-style: groove;
+  border-width: 5em;
+  border-top-color: rgb(19, 11, 87);
+  border-bottom-color: rgb(255, 255, 255);
+  border-left-color: #2d5a07;
+  border-right-color: #2d5a07;
+}
+
+.section3 {
+  position: relative;
+  background: rgb(255, 255, 255);
+  display: block;
+  max-width: 600px;
+  border-radius: 2%;
+  max-height: 30px;
+  margin-top: -3px;
+}
+
+.section4 {
+  position: relative;
+  padding: 6rem;
+  height: 80vh;
+  color: white;
+  background-image: url(https://www.reference.com/wp-content/uploads/sites/2/2022/02/74513e0cda179230f7d62344869f004d.png);
+  background-position: bottom;
+  background-position-y: 65%;
+  background-position-x: 2%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 200%;
+  max-width: 600px;
+  border-style: groove;
+  border-width: 5em;
+  border-top-color: rgb(19, 11, 87);
+  border-bottom-color: rgb(255, 255, 255);
+  border-left-color: #2d5a07;
+  border-right-color: #2d5a07;
+}
+
+.section5 {
+  position: relative;
+  background: rgb(255, 255, 255);
+  display: block;
+  max-width: 600px;
+  border-radius: 2%;
+  max-height: 30px;
+  margin-top: -3px;
+}
+
+.section6 {
+  position: relative;
+  padding: 6rem;
+  height: 80vh;
+  color: white;
+  background-image: url(https://i.pinimg.com/736x/d3/94/0b/d3940b4bcccda128f0991e8bb7326973--african-history-congo.jpg);
+  background-position: bottom;
+  background-position-y: 15%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 180%;
+  max-width: 600px;
+  border-style: groove;
+  border-width: 5em;
+  border-top-color: rgb(19, 11, 87);
+  border-bottom-color: rgb(255, 255, 255);
+  border-left-color: #2d5a07;
+  border-right-color: #2d5a07;
+}
+
+.section7 {
+  position: relative;
+  background: rgb(255, 255, 255);
+  display: block;
+  max-width: 600px;
+  border-radius: 2%;
+  max-height: 30px;
+  margin-top: -3px;
+}
+
+.section8 {
+  position: relative;
+  padding: 6rem;
+  height: 80vh;
+  color: white;
+  background-image: url(https://wordpress16141.files.wordpress.com/2015/11/thakane.jpg);
+  background-position: bottom;
+  background-position-y: 15%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  max-width: 600px;
+  border-style: groove;
+  border-width: 5em;
+  border-top-color: rgb(19, 11, 87);
+  border-bottom-color: rgb(255, 255, 255);
+  border-left-color: #2d5a07;
+  border-right-color: #2d5a07;
+}
+
+.section9 {
+  position: relative;
+  background: rgb(255, 255, 255);
+  display: block;
+  max-width: 600px;
+  border-radius: 2%;
+  max-height: 30px;
+  margin-top: -3px;
+}
+
+.section10 {
+  position: relative;
+  padding: 6rem;
+  height: 80vh;
+  color: white;
+  background-image: url(https://images.unsplash.com/photo-1603075405944-701034a7534a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80);
+  background-position: bottom;
+  background-position-y: 15%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  max-width: 600px;
+  border-style: groove;
+  border-width: 5em;
+  border-top-color: rgb(19, 11, 87);
+  border-bottom-color: rgb(255, 255, 255);
+  border-left-color: #2d5a07;
+  border-right-color: #2d5a07;
+}
+
+.section11 {
+  position: relative;
+  background: rgb(255, 255, 255);
+  display: block;
+  max-width: 600px;
+  border-radius: 2%;
+  max-height: 30px;
+  margin-top: -3px;
+}
+
+.footer {
+  margin-top: 150px;
+  width: 100%;
+  padding: 100px 15%;
+  background: #333;
+  color: #efefef;
+  display: flex;
+}
+
+.footer section {
+  text-align: center;
+  background-color: #000000;
+  margin-left: -4em;
+}
+
+.col-2 {
+  flex-grow: 2;
+  color: #ffffff;
+}
+
+.col-3 p {
+  color: #ffffff;
+}
+
+.footer section h3 {
+  font-weight: 300;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.col-1 a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+form input {
+  width: 400px;
+  height: 45px;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  outline: none;
+  border: none;
+  color: #000000;
+}
+
+form button {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 10px 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.social-icons {
+  margin-top: -5px;
+  padding-top: -15px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.social-icons i {
+  font-size: 22px;
+  margin: 10px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.custom-p {
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.scroll-class {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=/Griot%20Giuld.e31bb0bc.css.map */
